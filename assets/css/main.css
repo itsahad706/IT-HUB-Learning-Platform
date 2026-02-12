@@ -1,3 +1,7 @@
+/* =========================
+   1. CSS VARIABLES
+========================= */
+
 :root {
   /* Colors */
   --color-primary: #000000;
@@ -5,11 +9,12 @@
   --color-bg: #ffffff;
   --color-light: #f7f7f7;
   --color-border: #e0e0e0;
+  --color-accent: #0077ff;
 
   /* Typography */
   --font-main: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  /* Spacing */
+  /* Layout */
   --container-width: 70rem;
   --section-padding: 4rem;
 
@@ -17,45 +22,57 @@
   --radius-sm: 6px;
 }
 
-
+/* =========================
+   2. CSS RESET / BASE
+========================= */
 
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: var(--font-main);
-    line-height: 1.6;
-    color: var(--color-primary);
-    background-color: var(--color-bg);
+  font-family: var(--font-main);
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
 }
+
+/* =========================
+   3. GLOBAL STYLES
+========================= */
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease;
 }
 
 ul {
   list-style: none;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 p {
   color: var(--color-secondary);
 }
 
-
+/* =========================
+   4. LAYOUT
+========================= */
 
 .site-header,
 .site-main,
@@ -70,11 +87,13 @@ p {
 }
 
 .site-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
-
+/* =========================
+   5. COMPONENTS
+========================= */
 
 .navbar {
   max-width: var(--container-width);
@@ -87,7 +106,7 @@ p {
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .nav-links {
@@ -96,11 +115,12 @@ p {
 }
 
 .nav-links a:hover {
-    color: #0077ff;
+  color: var(--color-accent);
 }
 
-
-
+/* =========================
+   6. PAGE SECTIONS
+========================= */
 
 .hero {
   margin-top: 3rem;
@@ -127,7 +147,9 @@ p {
   border: 1px solid var(--color-border);
 }
 
-
+/* =========================
+   7. FOOTER
+========================= */
 
 .site-footer {
   margin-top: 4rem;
@@ -135,4 +157,3 @@ p {
   text-align: center;
   border-top: 1px solid var(--color-border);
 }
-
