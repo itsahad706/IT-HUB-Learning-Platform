@@ -28,24 +28,6 @@ This project is also part of my journey to practice and master **frontend develo
 
 ---
 
-## Project Structure
-
-IT-HUB-Learning-Platform/
-│
-├── assets/
-│ ├── css/
-│ │ └── main.css
-│ │
-│ └── js/
-│ └── app.js
-│
-├── index.html
-├── .gitignore
-└── README.md
-
-
----
-
 ## Current Features
 
 - Responsive navigation bar
